@@ -1,0 +1,244 @@
+@charset "UTF-8";
+@font-face {
+  font-family: Intro;
+  src: url(/font/IntroDemoCond-BlackCAPS.otf);
+}
+@font-face {
+  font-family: Roboto;
+  src: url(/font/Roboto-Black.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Intro', sans-serif;
+  /*border: 1px black solid;*/
+  /*overflow-x: hidden;*/
+}
+
+/*body {
+  width: 95vw;
+  border: 2px red solid;
+}*/
+.page {
+  /*border: 2px red solid;*/
+  display: grid;
+  grid-template-areas: 'header' 'main' 'footer';
+  grid-template-rows: 10% 1fr 10%;
+  width: 95vw;
+  height: 100vh;
+}
+
+.header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vh 5vw 1vh 5vw;
+}
+.header .header__busket {
+  background-color: #5222d0;
+  border-radius: 100px;
+  height: 38px;
+  width: 115px;
+  text-align: center;
+}
+.header .header__busket .header__busket_link-busket {
+  text-decoration: none;
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 38px;
+  letter-spacing: 1px;
+}
+
+.main {
+  grid-area: main;
+  display: grid;
+  grid-template-areas: 'main__container' 'main_separator' 'main__container-potential';
+  /*Вторая страница**********************************/
+}
+.main .main__container-start {
+  grid-area: main__container;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90vw;
+  height: 100vh;
+  margin-left: 5vw;
+  background-image: url(../image/pic_girl_with_phone.svg);
+  background-position: right;
+  background-repeat: no-repeat;
+  /*background-attachment: relative;*/
+}
+.main .main__container-start .main__container-start-title {
+  width: 50vw;
+  font-weight: bold;
+  font-size: 5vw;
+  /*text-transform: uppercase;*/
+  margin-bottom: 4vh;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.main .main__container-start .main__container-start-text {
+  font-family: 'Roboto Slab';
+  width: 50vw;
+  font-weight: 400;
+  font-size: 2.5vw;
+  margin-bottom: 4vh;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.main .main__container-start .main__container-start-purchase {
+  height: 84px;
+  width: 270px;
+  border-radius: 100px;
+  background-color: #5222d0;
+  text-align: center;
+}
+.main
+  .main__container-start
+  .main__container-start-purchase
+  .main__container-start-purchase_link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+  text-decoration: none;
+  color: white;
+  font-size: 35px;
+  font-family: 'Roboto Slab';
+  font-weight: 400;
+  line-height: 84px;
+}
+.main .main__separator {
+  background-color: #ec615b;
+  height: 10vh;
+  margin-left: 5vw;
+}
+.main .main__container-potential {
+  grid-area: main__container-potential;
+}
+.main .main__container-potential .main__container-potential__title {
+  height: 10%;
+  font-size: 4vw;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-left: 5vw;
+}
+.main .main__container-potential .main__container-potential__content {
+  width: 90vw;
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 5%;
+  justify-content: space-between;
+  margin-left: 5vw;
+}
+.main
+  .main__container-potential
+  .main__container-potential__content
+  .main__container-potential__section_img {
+  width: 100%;
+}
+.main
+  .main__container-potential
+  .main__container-potential__content
+  .main__container-potential__section_text {
+  font-family: 'Roboto Slab';
+  font-size: 2.5vw;
+}
+.main
+  .main__container-potential
+  .main__container-potential__content
+  .main__container-potential__contact {
+  /*border: 2px red solid;*/
+  height: 170px;
+  background: #ec615b;
+  padding-left: 1vw;
+  padding-top: 1vh;
+}
+.main
+  .main__container-potential
+  .main__container-potential__content
+  .main__container-potential__contact
+  .main__container-potential__contact_title {
+  color: white;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: 1px;
+}
+.main
+  .main__container-potential
+  .main__container-potential__content
+  .main__container-potential__contact
+  .main__container-potential__contact_input {
+  width: 70%;
+  font-family: 'Roboto Slab';
+  margin: 0 0.5em 0.5em 0;
+  height: 3em;
+  font-size: 1em;
+  border-radius: 10px;
+  padding-left: 1vw;
+}
+.main
+  .main__container-potential
+  .main__container-potential__content
+  .main__container-potential__contact
+  .main__container-potential__contact_button {
+  height: 3em;
+  width: 9em;
+  margin: 0.5em auto 3em 20%;
+  text-decoration: none;
+  text-align: center;
+  font-size: 0.8em;
+  font-weight: bold;
+  line-height: 3em;
+  border: 0;
+  border-radius: 100px;
+  color: white;
+  background-color: #5222d0;
+  letter-spacing: 1px;
+}
+
+.footer {
+  grid-area: footer;
+  display: flex;
+  align-items: center;
+  margin-left: 5vw;
+  gap: 5%;
+}
+.footer .footer__link {
+  text-decoration: none;
+  font-family: 'Roboto Slab';
+  font-weight: 300;
+  font-size: 1.4em;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  color: #5222d0;
+}
+
+/*ТЕлефон*********************************/
+@media screen and (max-width: 650px) {
+  /* * {
+    border: 1px black solid;
+  }*/
+  .page {
+    /*border: 2px red solid;*/
+    display: grid;
+    grid-template-areas: 'header' 'main';
+    grid-template-rows: 10% 1fr;
+    width: 95vw;
+    height: 100vh;
+  }
+  .page .header {
+    margin-bottom: 2vh;
+  }
+  .page .main__start {
+    align-items: center;
+    background: none;
+  }
+  .footer {
+    display: none;
+  }
+} /*# sourceMappingURL=style.css.map */
